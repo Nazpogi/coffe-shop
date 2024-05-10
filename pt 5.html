@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Entry Form</title>
+    <link rel="stylesheet" href="pt5.css">
+</head>
+<body>
+
+<h1>Data Entry Form</h1>
+
+<form id="dataForm" onsubmit="return validateForm()">   
+    <label for="firstName">First Name:</label>  
+    <input type="text" id="firstName" name="firstName" required>
+    <span id="firstNameError" class="error"></span><br>
+
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" name="lastName" required>
+    <span id="lastNameError" class="error"></span><br>
+
+    <label>Gender:</label>
+    <br>
+    <label for="male">Male</label>
+    <input type="radio" id="male" name="gender" value="male" required>
+    <label for="female">Female</label>
+    <input type="radio" id="female" name="gender" value="female" required>
+    <span id="genderError" class="error"></span><br>
+
+    <label for="transportation">How do you commute to school:</label>
+    <select id="transportation" name="transportation" required>
+        <option value="cars">Cars</option>
+        <option value="bus">Bus</option>
+        <option value="commute">Commute</option>
+    </select>
+    <span id="transportationError" class="error"></span><br>
+
+    <label for="birthdate">Birthdate:</label>
+    <input type="text" id="birthdate" name="birthdate" placeholder="MM/DD/YYYY" required>
+    <span id="birthdateError" class="error"></span><br>
+
+    <label for="selfDescription">Tell us about yourself:</label>
+    <textarea id="selfDescription" name="selfDescription" rows="4" cols="50"></textarea><br>
+
+    <input type="submit" value="Submit">
+</form>
+
+<script src="java.js"></script>
+
+</body>
+</html>
